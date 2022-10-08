@@ -1,7 +1,7 @@
 class HashTable {
   constructor(size){
     this.data = new Array(size);
-    this.data = [];
+    // this.data = [];
   }
 
   _hash(key) {
@@ -35,9 +35,10 @@ class HashTable {
   }
 }
 
-const myHashTable = new HashTable(50);
-console.log(myHashTable.set('grapes', 10000));
-myHashTable.set('grapes', 10000)
-myHashTable.get('grapes')
-myHashTable.set('apples', 9)
-myHashTable.get('apples')
+const myHashtable = new HashTable(50)
+myHashtable.set('grapes', 1000)
+myHashtable.set('oranges', 40)
+const getItem = myHashtable.get('grapes')
+const getItem2 = myHashtable.get('oranges')
+console.log(getItem, getItem2);
+console.log(myHashtable);

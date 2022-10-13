@@ -51,4 +51,32 @@ class LinkedList{
 const myLinkedList = new LinkedList(10)
 console.log(myLinkedList);
 
-// console.log(firstLinkedList.head.next.next.value);
+
+class SecondLinkedList{
+    constructor(value){
+        this.head = {
+            value: value,
+            next: null
+        }
+        this.tail = this.head
+        this.length = 1
+    }
+}
+
+const practice1 = new SecondLinkedList(22)
+console.log(practice1);
+
+
+class ThirdLinkedList{
+    constructor(value){
+        this.head = {
+            value: value,
+            next: null
+        }
+        this.tail = this.head
+        this.length = 1
+    }
+}
+
+const practice2 = new ThirdLinkedList(55)
+console.log(practice2);

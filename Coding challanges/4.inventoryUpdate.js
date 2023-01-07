@@ -1,7 +1,5 @@
-// Compare and update the inventory stored in a 2D array against a second 2D array of a fresh delivery. Update the current existing inventory item quantities (in arr1). If an item cannot be found, add the new item and quantity into the inventory array. The returned inventory array should be in alphabetical order by item.
-
 function updateInventory(arr1, arr2) {
-    const obj1 = arr1.reduce((acc, [amt, name])=>({
+      const obj1 = arr1.reduce((acc, [amt, name])=>({
     ...acc,
     [name]: amt
   }), {});
@@ -10,11 +8,11 @@ function updateInventory(arr1, arr2) {
     [name]: amt
   }), {});
 
-  for (const name in obj2) {
-    if (name in obj1) {
-      obj1[name] += obj2[name];
-    } else {
-      obj1[name] = obj2[name];
+    for(let name in obj2){
+    if(obj1[name]){
+        obj1[name] +=obj2[name]
+    }else{
+        obj1[name] =obj2[name]
     }
   }
 
@@ -41,5 +39,4 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-// updateInventory(curInv, newInv);
-console.log(updateInventory(curInv, newInv));
+updateInventory(curInv, newInv);

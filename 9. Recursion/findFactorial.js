@@ -21,8 +21,9 @@ console.log(findFactorialIterative(1));
 
 // Find factorial recursive
 function findFactorialRecursive(number){
-    if(number === 2 || number === 1) return number
-    return number * findFactorialRecursive(number-1)
+//     if(number === 2 || number === 1) return number
+//     return number * findFactorialRecursive(number-1)
+    return num === 2 ? 2 : num * findFactorial(num - 1)
 }
 
 console.log('Factorial result');
